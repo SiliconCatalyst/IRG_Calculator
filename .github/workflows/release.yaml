@@ -1,0 +1,50 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    name: Build (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            artifact_name: irg_calc
+            release_name: irg_calc-linux
+          - os: windows-latest
+            artifact_name: irg_calc.exe
+            release_name: irg_calc-windows.exe
+          - os: macos-latest
+            artifact_name: irg_calc
+            release_name: irg_calc-macos
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DIRG_BUILD_TESTS=OFF
+
+      - name: Build
+        run: cmake --build build --config Release
+
+      - name: Rename artifact
+        shell: bash
+        run: |
+          mkdir -p dist
+          # Windows puts the binary in build/Release/, others in build/
+          if [ -f build/Release/${{ matrix.artifact_name }} ]; then
+            cp build/Release/${{ matrix.artifact_name }} dist/${{ matrix.release_name }}
+          else
+            cp build/${{ matrix.artifact_name }} dist/${{ matrix.release_name }}
+          fi
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/${{ matrix.release_name }}
