@@ -1,0 +1,1 @@
+/usr/sbin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/irg_calc_tests.dir/link.d CMakeFiles/irg_calc_tests.dir/test_irg_calculator.cpp.o -o irg_calc_tests  ../libirg_core.a

@@ -6,16 +6,41 @@
 
 namespace irg::i18n {
 
+// Every piece of user-facing text in the app is a TextKey.
+// Nothing in cli/ or core/ should ever contain a hardcoded string
+// meant for display - it should ask the Translator for a TextKey instead.
 enum class TextKey {
   LanguageSelectPrompt,
   InvalidLanguageChoice,
-  EnterAnnualIncomePrompt,
+  EnterMonthlyIncomePrompt,
   InvalidNumberInput,
-  IrgResultLabel,
-  NetIncomeAfterIrgLabel,
+
+  NetImposableLabel,
+  NetImposableFloorNote,
+  FullyExemptMessage,
+
+  BracketBreakdownHeader,
+  BracketRangeOpenEndedLabel,
+  TaxableAmountLabel,
+  TaxForBracketLabel,
+
+  GrossIrgLabel,
+  FirstAbattementLabel,
+  FirstAbattementCapAppliedLabel,
+  IrgAfterFirstAbattementLabel,
+  SecondAbattementZoneNotice,
+  SecondAbattementFormulaLine,
+
+  FinalIrgLabel,
+  NetPayableLabel,
+  CurrencyUnitLabel,
+
   ExitMessage
 };
 
+// Translator is a pure lookup service: given a language and a key,
+// it returns the string to display. It has no knowledge of tax rules
+// (core/) or how input/output happens (cli/).
 class Translator {
 public:
   explicit Translator(Language language);

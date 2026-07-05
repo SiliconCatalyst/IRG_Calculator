@@ -1,6 +1,7 @@
 #include "irg/core/irg_calculator.hpp"
 
 #include <algorithm>
+#include <cmath>
 
 namespace irg::core {
 
@@ -75,6 +76,7 @@ IrgCalculationBreakdown
 IrgCalculator::calculateMonthlyIrgBreakdown(double monthlyNetIncome) const {
   IrgCalculationBreakdown breakdown;
   breakdown.netImposable = std::max(0.0, monthlyNetIncome);
+  const double flooredImposable = std::floor(breakdown.netImposable);
 
   if (isFullyExempt(breakdown.netImposable)) {
     breakdown.isFullyExempt = true;
@@ -83,7 +85,7 @@ IrgCalculator::calculateMonthlyIrgBreakdown(double monthlyNetIncome) const {
   }
 
   breakdown.bracketContributions =
-      computeBracketContributions(breakdown.netImposable, brackets_);
+      computeBracketContributions(flooredImposable, brackets_);
 
   for (const auto &contribution : breakdown.bracketContributions) {
     breakdown.grossIrg += contribution.taxAmount;

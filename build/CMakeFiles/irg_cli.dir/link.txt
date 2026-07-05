@@ -1,0 +1,2 @@
+/usr/sbin/ar qc libirg_cli.a CMakeFiles/irg_cli.dir/src/cli/console_io.cpp.o CMakeFiles/irg_cli.dir/src/cli/application.cpp.o
+/usr/sbin/ranlib libirg_cli.a

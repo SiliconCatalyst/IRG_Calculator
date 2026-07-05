@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/malek/Code/IRG_Calculator/build",
+  "command": "/usr/sbin/c++  -I/home/malek/Code/IRG_Calculator/include -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/irg_core.dir/src/core/irg_calculator.cpp.o -c /home/malek/Code/IRG_Calculator/src/core/irg_calculator.cpp",
+  "file": "/home/malek/Code/IRG_Calculator/src/core/irg_calculator.cpp",
+  "output": "CMakeFiles/irg_core.dir/src/core/irg_calculator.cpp.o"
+},
+{
+  "directory": "/home/malek/Code/IRG_Calculator/build",
+  "command": "/usr/sbin/c++  -I/home/malek/Code/IRG_Calculator/include -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/irg_i18n.dir/src/i18n/translator.cpp.o -c /home/malek/Code/IRG_Calculator/src/i18n/translator.cpp",
+  "file": "/home/malek/Code/IRG_Calculator/src/i18n/translator.cpp",
+  "output": "CMakeFiles/irg_i18n.dir/src/i18n/translator.cpp.o"
+},
+{
+  "directory": "/home/malek/Code/IRG_Calculator/build",
+  "command": "/usr/sbin/c++  -I/home/malek/Code/IRG_Calculator/include -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/irg_cli.dir/src/cli/console_io.cpp.o -c /home/malek/Code/IRG_Calculator/src/cli/console_io.cpp",
+  "file": "/home/malek/Code/IRG_Calculator/src/cli/console_io.cpp",
+  "output": "CMakeFiles/irg_cli.dir/src/cli/console_io.cpp.o"
+},
+{
+  "directory": "/home/malek/Code/IRG_Calculator/build",
+  "command": "/usr/sbin/c++  -I/home/malek/Code/IRG_Calculator/include -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/irg_cli.dir/src/cli/application.cpp.o -c /home/malek/Code/IRG_Calculator/src/cli/application.cpp",
+  "file": "/home/malek/Code/IRG_Calculator/src/cli/application.cpp",
+  "output": "CMakeFiles/irg_cli.dir/src/cli/application.cpp.o"
+},
+{
+  "directory": "/home/malek/Code/IRG_Calculator/build",
+  "command": "/usr/sbin/c++  -I/home/malek/Code/IRG_Calculator/include -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/irg_calc.dir/src/main.cpp.o -c /home/malek/Code/IRG_Calculator/src/main.cpp",
+  "file": "/home/malek/Code/IRG_Calculator/src/main.cpp",
+  "output": "CMakeFiles/irg_calc.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/malek/Code/IRG_Calculator/build/tests",
+  "command": "/usr/sbin/c++  -I/home/malek/Code/IRG_Calculator/include -O3 -DNDEBUG -std=gnu++17 -Wall -Wextra -Wpedantic -o CMakeFiles/irg_calc_tests.dir/test_irg_calculator.cpp.o -c /home/malek/Code/IRG_Calculator/tests/test_irg_calculator.cpp",
+  "file": "/home/malek/Code/IRG_Calculator/tests/test_irg_calculator.cpp",
+  "output": "tests/CMakeFiles/irg_calc_tests.dir/test_irg_calculator.cpp.o"
+}
+]
