@@ -1,2 +1,0 @@
-/usr/sbin/ar qc libirg_i18n.a CMakeFiles/irg_i18n.dir/src/i18n/translator.cpp.o
-/usr/sbin/ranlib libirg_i18n.a

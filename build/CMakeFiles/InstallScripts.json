@@ -1,8 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/home/malek/Code/IRG_Calculator/build/cmake_install.cmake",
-		"/home/malek/Code/IRG_Calculator/build/tests/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

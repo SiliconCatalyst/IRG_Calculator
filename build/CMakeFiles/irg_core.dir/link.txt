@@ -1,2 +1,0 @@
-/usr/sbin/ar qc libirg_core.a CMakeFiles/irg_core.dir/src/core/irg_calculator.cpp.o
-/usr/sbin/ranlib libirg_core.a
