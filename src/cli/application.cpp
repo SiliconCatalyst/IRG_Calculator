@@ -1,6 +1,9 @@
 #include "irg/cli/application.hpp"
 #include "irg/cli/console_io.hpp"
 
+#include <iostream>
+#include <limits>
+
 namespace irg::cli {
 
 using irg::core::BracketContribution;
