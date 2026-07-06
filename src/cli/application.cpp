@@ -178,9 +178,9 @@ void Application::run() {
   printLine(translator.translate(TextKey::ExitMessage));
   printLine("Contact: malek.boulellou@proton.me");
   printLine("");
-}
 #ifdef _WIN32
-printLine("Press Enter to exit...");
-std::cin.get();
+  printLine("Press Enter to exit...");
+  std::cin.get();
 #endif
+}
 } // namespace irg::cli
