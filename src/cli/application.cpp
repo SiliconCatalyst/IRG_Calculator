@@ -1,5 +1,4 @@
 #include "irg/cli/application.hpp"
-
 #include "irg/cli/console_io.hpp"
 
 namespace irg::cli {
@@ -177,5 +176,8 @@ void Application::run() {
   printLine("Contact: malek.boulellou@proton.me");
   printLine("");
 }
-
+#ifdef _WIN32
+printLine("Press Enter to exit...");
+std::cin.get();
+#endif
 } // namespace irg::cli
