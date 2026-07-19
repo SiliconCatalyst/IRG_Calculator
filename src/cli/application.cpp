@@ -178,6 +178,8 @@ void Application::run() {
   printLine(translator.translate(TextKey::ExitMessage));
   printLine("Contact: malek.boulellou@proton.me");
   printLine("");
+
+// Removes immediet closing behavior on windows
 #ifdef _WIN32
   printLine("Press Enter to exit...");
   std::cin.get();
